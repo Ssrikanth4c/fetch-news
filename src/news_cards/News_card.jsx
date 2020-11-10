@@ -36,14 +36,14 @@ const NewsCard = ({data}) => {
                                         }
                                     </div>
                                     <div className="col-8">
-                                        <h5 className=' pt-2 text-info text-truncate'>{news['title']}
+                                        <h5 className=' pt-2 text-danger text-truncate'>{news['title']}
                                         </h5>
-                                        <p className='description text-justify'>{news.description}</p>
+                                        <p className='description text-justify mb-0 font-weight-bold'>{news.description}</p>
                                         <a href={news.url} target='blank'>
                                             <button className='m-2 btn btn-outline-danger'>More Info</button>
                                         </a>
                                         
-                                        <small data-toggle='tooltip' data-placement="top" title={news.publishedAt}>publishedAt</small>
+                                        <small data-toggle='tooltip' data-placement="right" title={news.publishedAt}>publishedAt</small>
                                     </div>
                                 </div>
                             </div>
