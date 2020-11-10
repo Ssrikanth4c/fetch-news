@@ -12,8 +12,7 @@ class App extends React.Component {
     }
   }
  async componentDidMount(){
-   console.log('sree')
-    const url="http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d7f51e93fed7469bbf2ffe6095c7e15a";
+    const url=`http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
     const resp= await fetch(url);
     const data= await resp.json();
     this.setState({
@@ -31,8 +30,8 @@ class App extends React.Component {
         loading? 
         (
           <div className='loading d-flex justify-content-center align-items-center'>
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only">Loading...</span>
+            <div className="spinner-border text-primary" role="status">
+              <span className="sr-only">Loading...</span>
             </div>
           </div>
         )
