@@ -1,8 +1,6 @@
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NewsCard from './news_cards/News_card';
-// import './App.css';
 class App extends React.Component {
   constructor(){
     super();
